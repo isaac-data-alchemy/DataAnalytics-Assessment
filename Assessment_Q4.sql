@@ -1,17 +1,17 @@
 USE `adashi_staging`;
 WITH CustomerData AS (
     SELECT 
-        u.id AS customer_id,
-        CONCAT(u.first_name, ' ', u.last_name) AS name,
-        TIMESTAMPDIFF(MONTH, u.date_joined, NOW()) AS tenure_months,
-        COUNT(s.id) AS total_transactions,
-        SUM(s.confirmed_amount) * 0.001 AS total_profit
+        user.id AS customer_id,
+        CONCAT(user.first_name, ' ', user.last_name) AS name,
+        TIMESTAMPDIFF(MONTH, user.date_joined, NOW()) AS tenure_months,
+        COUNT(savings.id) AS total_transactions,
+        SUM(savings.confirmed_amount) * 0.001 AS total_profit
     FROM 
-        users_customuser u
+        users_customuser user
     LEFT JOIN 
-        savings_savingsaccount s ON u.id = s.owner_id
+        savings_savingsaccount savings ON user.id = savings.owner_id
     GROUP BY 
-        u.id
+        user.id
 ),
 
 
