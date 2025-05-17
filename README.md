@@ -1,6 +1,10 @@
 # Introduction
 This file documents the approach and process I followed through out writing the **sql scripts**  for this task split into sections of the questions , approach, issues encountered etc. I have written this in markdown such that when you preview you can follow it like a coherent  report document and yes i do speak like this on a day to day.  My README.md is a bit long and not without error so please read with care.
 
+# Random Info
+`leet code username`: ethical_data_alchemist
+`leet code link`: https://leetcode.com/u/ethical_data_alchemist/
+
 
 ## General Approach 
 My general approach towards all these tasks places emphasis on **readability** for other data analysts so the code can be easily understood hence my excessive usage of CTE (Common Table Expressions) to keep the code modular and maintainable( Ha maintainable like I am gonna get the Job). 
