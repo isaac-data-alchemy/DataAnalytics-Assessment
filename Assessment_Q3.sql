@@ -1,35 +1,35 @@
 USE `adashi_staging`;
 WITH InactiveSavings AS (
     SELECT 
-        s.plan_id,
-        s.owner_id,
+        savings.plan_id,
+        savings.owner_id,
         'Savings' AS type,
-        MAX(s.transaction_date) AS last_transaction_date,
-        DATEDIFF(NOW(), MAX(s.transaction_date)) AS inactivity_days
+        MAX(savings.transaction_date) AS last_transaction_date,
+        DATEDIFF(NOW(), MAX(savings.transaction_date)) AS inactivity_days
     FROM 
-        savings_savingsaccount s
+        savings_savingsaccount savings
     GROUP BY 
-        s.plan_id, s.owner_id
+        savings.plan_id, savings.owner_id
     HAVING 
-        MAX(s.transaction_date) < NOW() - INTERVAL 365 DAY
+        MAX(savings.transaction_date) < NOW() - INTERVAL 365 DAY
 ),
 
 InactiveInvestments AS (
     SELECT 
-        p.id AS plan_id,
-        p.owner_id,
+        plans.id AS plan_id,
+        plans.owner_id,
         'Investment' AS type,
-        MAX(p.last_charge_date) AS last_transaction_date,
-        DATEDIFF(NOW(), MAX(p.last_charge_date)) AS inactivity_days
+        MAX(plans.last_charge_date) AS last_transaction_date,
+        DATEDIFF(NOW(), MAX(plans.last_charge_date)) AS inactivity_days
     FROM 
-        plans_plan p
+        plans_plan plans
     WHERE 
-        p.is_deleted = 0 
-        AND p.is_archived = 0
+        plans.is_deleted = 0 
+        AND plans.is_archived = 0
     GROUP BY 
-        p.id, p.owner_id
+        plans.id, plans.owner_id
     HAVING 
-        MAX(p.last_charge_date) < NOW() - INTERVAL 365 DAY
+        MAX(plans.last_charge_date) < NOW() - INTERVAL 365 DAY
 )
 
 
