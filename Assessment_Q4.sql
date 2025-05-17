@@ -1,3 +1,6 @@
+-- Please visit my README.md for more verbose explanations
+-- This Query attempts  to estimate Customer Lifetime Value (CLV) for each user
+-- Step 1: Calculate the account tenure in months, total transactions, and total profit
 USE `adashi_staging`;
 WITH CustomerData AS (
     SELECT 
@@ -14,6 +17,7 @@ WITH CustomerData AS (
         user.id
 ),
 
+-- Step 2: Estimate CLV
 
 CLVEstimation AS (
     SELECT 
@@ -29,7 +33,7 @@ CLVEstimation AS (
         CustomerData
 )
 
-
+-- Step 3: Display results sorted by estimated CLV
 SELECT 
     customer_id,
     name,

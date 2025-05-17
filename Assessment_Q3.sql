@@ -1,3 +1,7 @@
+-- Please visit the README.md for more verbose explanations
+-- This Query tries to find active accounts (savings or investments) with no transactions in the last year
+
+-- Step 1: Fetch savings accounts with no transactions in the last 365 days
 USE `adashi_staging`;
 WITH InactiveSavings AS (
     SELECT 
@@ -13,6 +17,8 @@ WITH InactiveSavings AS (
     HAVING 
         MAX(savings.transaction_date) < NOW() - INTERVAL 365 DAY
 ),
+
+-- Step 2: Check for investment plans with no transactions in the last 365 days
 
 InactiveInvestments AS (
     SELECT 
@@ -32,6 +38,7 @@ InactiveInvestments AS (
         MAX(plans.last_charge_date) < NOW() - INTERVAL 365 DAY
 )
 
+-- Step 3: Then go ahead and Combine the two kinds of inactive accounts
 
 SELECT 
     plan_id,

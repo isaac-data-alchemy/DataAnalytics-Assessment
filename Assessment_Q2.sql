@@ -1,3 +1,6 @@
+-- This Query analyzes customer transactions frequencys and categorizes them accordingly
+
+-- Step 1: Calculate the number of months a user has been transacting and their total transaction count
 USE `adashi_staging`;
 WITH CustomerTransactions AS (
     SELECT 
@@ -10,6 +13,7 @@ WITH CustomerTransactions AS (
         savings.owner_id
 ),
 
+-- Step 2: Calculate average transactions per month and categorize frequency
 FrequencyCategorization AS (
     SELECT 
         owner_id,
@@ -25,7 +29,7 @@ FrequencyCategorization AS (
         CustomerTransactions
 )
 
-
+-- Step 3: Finally Aggregate the results by category
 SELECT 
     frequency_category,
     COUNT(owner_id) AS customer_count,
