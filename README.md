@@ -3,7 +3,7 @@ This file documents the approach and process I followed through out writing the 
 
 
 ## General Approach 
-My general approach towards all these tasks places emphasis on **readability** for other data analysts so the code can be easily understood hence my excessive usage of CTE (Common Table Expressions) to keep the code modular and maintainable. 
+My general approach towards all these tasks places emphasis on **readability** for other data analysts so the code can be easily understood hence my excessive usage of CTE (Common Table Expressions) to keep the code modular and maintainable( Ha maintainable like I am gonna get the Job). 
 
 ## Preparatory Queries 
 My preparation involved investigating all the tables for all the information i need to come up with solutions for the tasks and cut down on some of my thinking time as well as making navigating this schema  much easier. This is the query i ran:
