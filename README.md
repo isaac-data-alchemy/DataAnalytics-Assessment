@@ -3,6 +3,7 @@ This file documents the approach and process I followed through out writing the 
 
 # Random Info
 `leet code username`: ethical_data_alchemist
+
 `leet code link`: https://leetcode.com/u/ethical_data_alchemist/
 
 
@@ -33,7 +34,7 @@ WHERE
     `
 
 ## General Issue 
-working with mysql, admitedly i should be database agnostic but i spend so much time in postgres and the psql shell commandline qw well as writing scripts to automate things of this nature that setting up/ installing mysql and importing  the db in mysql was a bit frustrating and my queries were failing for syntax compatibility but once i got the hang of it the rest was history 
+working with mysql, admitedly i should be particular about any database because vendor lock-in is silly when working in technology, but i spend so much time in postgres, the psql shell commandline as well as  python to automate things of this nature that setting up, installing mysql and importing  the db in mysql was a bit frustrating and my queries were failing for syntax compatibility but once i got the hang of it the rest was as they say it history.
 
 ## High-Value Customers with Multiple Products file: Assessment_Q1.sql
 Scenario: The business wants to identify customers who have both a savings and an investment plan (cross-selling opportunity).
@@ -41,11 +42,13 @@ Task: Write a query to find customers with at least one funded savings plan AND 
 
 **Tables**
 `users_customuser`
+
 `savings_savingsaccount`
+
 `plans_plan`
 
 ## Approach 
-- My Query tries to fetch cross-selling opportunities for customers that have with emphasis both savings and investment plans
+- My Query tries to fetch cross-selling opportunities for customers that have, with emphasis both savings and investment plans.
 
 So based off the task my output columns are :
 
@@ -76,6 +79,7 @@ Task: Calculate the average number of transactions per customer per month and ca
 
 **Tables**
 `users_customuser`
+
 `savings_savingsaccount`
 
 ## Aproach
