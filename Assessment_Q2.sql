@@ -1,13 +1,13 @@
 USE `adashi_staging`;
 WITH CustomerTransactions AS (
     SELECT 
-        s.owner_id,
-        COUNT(s.id) AS transaction_count,
-        TIMESTAMPDIFF(MONTH, MIN(s.transaction_date), MAX(s.transaction_date)) + 1 AS active_months
+        savings.owner_id,
+        COUNT(savings.id) AS transaction_count,
+        TIMESTAMPDIFF(MONTH, MIN(savings.transaction_date), MAX(savings.transaction_date)) + 1 AS active_months
     FROM 
-        savings_savingsaccount s
+        savings_savingsaccount savings
     GROUP BY 
-        s.owner_id
+        savings.owner_id
 ),
 
 FrequencyCategorization AS (
