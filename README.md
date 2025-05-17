@@ -1,13 +1,13 @@
-# Brief 
+# Introduction
 This file documents my approach and process through out this task split into sections of the questions , steps. I have written this in markdown such that when you preview it you can follow it like a coherent  report document and yes i do speak like this on a day to day.
 
 
 ## General Approach 
-My general approach towards all these tasks places emphasis on **readability** for other data analysts so the code can be easily understood 
+My general approach towards all these tasks places emphasis on **readability** for other data analysts so the code can be easily understood hence my excessive usage of CTE (Common Table Expressions) to keep the code modular and maintainable. 
 
-## Preparation
-My preparation involved investigating all the tables for all the information i need to come up with my solution queries and this is the query i ran:
-"""
+## Preparatory Queries 
+My preparation involved investigating all the tables for all the information i need to come up with solutions for the tasks and cut down on some of my thinking time as well as making navigating this schema  much easier. This is the query i ran:
+
 `
 SELECT 
     
@@ -27,8 +27,9 @@ WHERE
     TABLE_SCHEMA = 'adashi_staging' AND 
     TABLE_NAME = 'withdrawals_withdrawal'; #replace with all the other table names to fetch similar data 
     `
-"""
+
 ## General Issue 
+working with mysql, admitedly i should be database agnostic but i spend so much time in postgres and the psql shell commandline qw well as writing scripts to automate things of this nature that setting up/ installing mysql and importing  the db in mysql was a bit frustrating and my queries were failing for syntax compatibility but once i got the hang of it the rest was history 
 
 ## High-Value Customers with Multiple Products
 Scenario: The business wants to identify customers who have both a savings and an investment plan (cross-selling opportunity).
@@ -62,19 +63,5 @@ I made use of an Inner join to link savings accounts to their respective owners 
 -  There was confusion on the calculation of net balance for savings, which was clarified as 'confirmed_amount - deduction_amount'.
 - The expected output format was clarified to include counts and total deposits, which required adjustments to aggregation and grouping logic.
 
-
-
-Hints
-owner_id is a foreign key to the ID primary key in the users table
-plan_id is a foreign key to the ID primary key in the plans table
-savings_plan : is_regular_savings = 1
-investment_plan: is_a_fund = 1
-confirmed_amount is the field for value of inflow
-amount_withdrawn is the field for value of withdrawal
-all amount fields are in kobo
-
-
-
-Error Code: 1054. Unknown column 's.amount_withdrawn' in 'field list'
 
 
