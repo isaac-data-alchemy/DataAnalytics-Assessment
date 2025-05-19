@@ -19,6 +19,7 @@ This file documents the approach and process I followed through out writing the 
 
 ## General Approach 
 My general approach towards all these tasks places emphasis on **readability** for other data analysts so the code can be easily understood hence my excessive usage of CTE (Common Table Expressions) to keep the code modular and maintainable( Ha maintainable like I am gonna get the Job). 
+- [Back to top](#table-of-contents)
 
 ## Preparatory Queries 
 My preparation involved investigating all the tables for all the information i need to come up with solutions for the tasks and cut down on some of my thinking time as well as making navigating this schema  much easier. This is the query i ran:
@@ -42,6 +43,8 @@ WHERE
     TABLE_SCHEMA = 'adashi_staging' AND 
     TABLE_NAME = 'withdrawals_withdrawal'; #replace with all the other table names to fetch similar data 
     `
+
+- [Back to top](#table-of-contents)
 
 ## General Issue 
 working with mysql, admitedly i shouldn't be particular about any databases because vendor lock-in is silly when working in technology, but i spend so much time in postgres, the psql shell as well as  python to automate things of this nature that setting up, installing mysql and importing  the db in mysql was a bit frustrating (not unfamiliar) and my queries were failing for syntax compatibility but once i got the hang of it the rest was as they say it history.
