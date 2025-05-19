@@ -1,6 +1,16 @@
 # Introduction
 This file documents the approach and process I followed through out writing the **sql scripts**  for this task split into sections of the questions , approach, issues encountered etc. I have written this in markdown such that when you preview you can follow it like a coherent  report document and yes i do speak like this on a day to day.  My README.md is a bit long and not without error so please read with care.
 
+## Table of Contents
+- [Leet code Info](#random-info)
+- [General Approach](#general-approach)
+- [Preparatory Queries](#preparatory-queries)
+- [General Issues](#general-issue)
+- [Assessment One](#high-value-customers-with-multiple-products-file-assessment_q1sql)
+- [Assessment Two](#transaction-frequency-analysis-file-assessment_q2sql)
+- [Assessment Three](#account-inactivity-alert-assessment_q3sql)
+- [Assessment Three](#customer-lifetime-value-clv-estimation-assessment_q4sql)
+
 # Random Info
 `leet code username`: ethical_data_alchemist
 
@@ -70,7 +80,7 @@ I made use of an Inner join to link savings accounts to their respective owners 
    This was corrected by using 'deduction_amount' instead, based on the table schema provided.
 -  There was confusion on the calculation of net balance for savings, which was clarified as 'confirmed_amount - deduction_amount'.
 - The expected output format was clarified to include counts and total deposits, which required adjustments to aggregation and grouping logic.
-
+- [Back to top](#table-of-contents)
 ## Transaction Frequency Analysis file: Assessment_Q2.sql
 Scenario: The finance team wants to analyze how often customers transact to segment them (e.g., frequent vs. occasional users).
 Task: Calculate the average number of transactions per customer per month and categorize them:
@@ -112,7 +122,8 @@ I follow a three step process using as mentioned earlier on Common Table Express
 - then i check for the average transaction rate within each segment 
 - Results are presented in this order (High -> Medium -> Low)
 
- 
+ - [Back to top](#table-of-contents)
+
 ## Account Inactivity Alert Assessment_Q3.sql
 Scenario: The ops team wants to flag accounts with no inflow transactions for over one year.
 Task: Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) .
@@ -165,6 +176,11 @@ type: Identifies whether the account is "Savings" or "Investment"
 - inactivity_days: The number of days with no activity
 - Orders results by inactivity_days in descending order (most inactive accounts first)
 
+## Problems Encountered
+- Repeated failing queries, I was creating syntax in my head that seemed right but was a quite off from mysqls implementation. I had to take a break and google syntax documentations on the official mysql website and forumn rooms on reddit. 
+
+- [Back to top](#table-of-contents)
+
 ## Customer Lifetime Value (CLV) Estimation Assessment_Q4.sql
 Scenario: Marketing wants to estimate CLV based on account tenure and transaction volume (simplified model).
 Task: For each customer, assuming the profit_per_transaction is 0.1% of the transaction value, calculate:
@@ -216,6 +232,7 @@ my output columns are :
 **Annual Projection**: `total_profit/ total_transactions` determines the average profit per transaction
 **CLV Estimation**: Multiplying the above gives an estimated annual customer value (Incredibly Over simplified )
 
-## Issues
+## Problems encountered 
 Just general confusion about the formulas, and how to begin writing the query, I solved this by stepping away from the computer and heading to https://www.leetcode.com because i believed I had stumbled on a similar problem beforehand
 
+- [Back to top](#table-of-contents)
