@@ -120,7 +120,7 @@ Task: Find all active accounts (savings or investments) with no transactions in 
 `savings_savingsaccount`
 
 ## Approach
-in similar fashion with my approach here can be broken into three steps ***identifying inactive savings account**, ***identifying inactive investment plans***, ***combining and presenting results***
+in similar fashion with my approach here can be broken into three steps ***identifying inactive savings account***, ***identifying inactive investment plans***, ***combining and presenting results***
 
 Output columns are :
 
