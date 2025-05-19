@@ -87,8 +87,11 @@ I made use of an Inner join to link savings accounts to their respective owners 
 ## Transaction Frequency Analysis file: Assessment_Q2.sql
 Scenario: The finance team wants to analyze how often customers transact to segment them (e.g., frequent vs. occasional users).
 Task: Calculate the average number of transactions per customer per month and categorize them:
+
 `"High Frequency" (≥10 transactions/month)`
+
 `"Medium Frequency" (3-9 transactions/month)`
+
 `"Low Frequency" (≤2 transactions/month)`
 
 **Tables**
