@@ -41,6 +41,7 @@ Scenario: The business wants to identify customers who have both a savings and a
 Task: Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.
 
 **Tables**
+
 `users_customuser`
 
 `savings_savingsaccount`
@@ -78,6 +79,7 @@ Task: Calculate the average number of transactions per customer per month and ca
 `"Low Frequency" (≤2 transactions/month)`
 
 **Tables**
+
 `users_customuser`
 
 `savings_savingsaccount`
@@ -116,6 +118,7 @@ Scenario: The ops team wants to flag accounts with no inflow transactions for ov
 Task: Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) .
 
 **Tables**
+
 `plans_plan`
 `savings_savingsaccount`
 
@@ -171,7 +174,9 @@ Estimated CLV `(Assume: CLV = (total_transactions / tenure) * 12 * avg_profit_pe
 Order by estimated CLV from highest to lowest
 
 **Tables**
+
 `users_customuser`
+
 `savings_savingsaccount`
 
 ## Approach
