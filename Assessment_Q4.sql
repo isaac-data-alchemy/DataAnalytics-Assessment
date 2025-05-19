@@ -2,6 +2,7 @@
 -- This Query attempts  to estimate Customer Lifetime Value (CLV) for each user
 -- Step 1: Calculate the account tenure in months, total transactions, and total profit
 -- off bat you can see i am using lots of aliases for readabilty of code
+-- I am not using tons of in code comments because i am worried it might prevent the code from running correctly
 USE `adashi_staging`;
 WITH CustomerData AS (
     SELECT 
