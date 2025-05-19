@@ -14,7 +14,7 @@ This file documents the approach and process I followed through out writing the 
 # Random Info
 `leet code username`: ethical_data_alchemist
 
-`leet code link`: https://leetcode.com/u/ethical_data_alchemist/
+`leet code link`: [Click Here if interested](https://leetcode.com/u/ethical_data_alchemist/)
 
 
 ## General Approach 
