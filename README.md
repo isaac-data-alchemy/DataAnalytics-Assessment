@@ -84,6 +84,7 @@ Task: Calculate the average number of transactions per customer per month and ca
 
 ## Aproach
 So based off the task my output columns are :
+
 `frequency_category` 
 
 `customer_count`
@@ -122,6 +123,7 @@ Task: Find all active accounts (savings or investments) with no transactions in 
 in similar fashion with my approach here can be broken into three steps ***identifying inactive savings account**, ***identifying inactive investment plans***, ***combining and presenting results***
 
 Output columns are :
+
 `plan_id`
 
 `owner_id`
@@ -176,6 +178,7 @@ Order by estimated CLV from highest to lowest
 So my approach gathers customer information and transaction history, then it estimates the lifetime  value based on customer behaviour patterns , finally the results are sorted and displayed
 
 my output columns are :
+
 `customer_id`
 
 `name`
