@@ -83,6 +83,13 @@ Task: Calculate the average number of transactions per customer per month and ca
 `savings_savingsaccount`
 
 ## Aproach
+So based off the task my output columns are :
+`frequency_category` 
+
+`customer_count`
+
+`avg_transactions_per_month`
+
 I follow a three step process using as mentioned earlier on Common Table Expressions (CTEs)
 
 **Transaction Aggregation/ CustomerTransactions (brining the transactions together)**
@@ -113,6 +120,19 @@ Task: Find all active accounts (savings or investments) with no transactions in 
 
 ## Approach
 in similar fashion with my approach here can be broken into three steps ***identifying inactive savings account**, ***identifying inactive investment plans***, ***combining and presenting results***
+
+Output columns are :
+`plan_id`
+
+`owner_id`
+
+`type`
+
+`last_transaction_date`
+
+`inactivity_days`
+
+
 
 **Inactive Savings Account**
 - Create a Common Table Expression named InactiveSavings
@@ -154,6 +174,17 @@ Order by estimated CLV from highest to lowest
 
 ## Approach
 So my approach gathers customer information and transaction history, then it estimates the lifetime  value based on customer behaviour patterns , finally the results are sorted and displayed
+
+my output columns are :
+`customer_id`
+
+`name`
+
+`tenure_months`
+
+`total_transactions`
+
+`estimated_clv`
 
 **CustomerData CTE (Data Collection)**
 - I extract customer identification and personal information
