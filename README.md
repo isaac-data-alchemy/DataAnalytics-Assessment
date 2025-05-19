@@ -49,6 +49,9 @@ WHERE
 ## General Issue 
 working with mysql, admitedly i shouldn't be particular about any databases because vendor lock-in is silly when working in technology, but i spend so much time in postgres, the psql shell as well as  python to automate things of this nature that setting up, installing mysql and importing  the db in mysql was a bit frustrating (not unfamiliar) and my queries were failing for syntax compatibility but once i got the hang of it the rest was as they say it history.
 
+> Most of the queries that need `GROUP BY` also include a `ORDER BY` because of the default ordering before **MYSQL** Uses and quite frankly this should be in my General Issues
+
+
 ## High-Value Customers with Multiple Products file: Assessment_Q1.sql
 Scenario: The business wants to identify customers who have both a savings and an investment plan (cross-selling opportunity).
 Task: Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.
