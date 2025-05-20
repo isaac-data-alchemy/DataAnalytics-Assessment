@@ -9,7 +9,7 @@ This file documents the approach and process I followed through out writing the 
 - [Assessment One](#high-value-customers-with-multiple-products-file-assessment_q1sql)
 - [Assessment Two](#transaction-frequency-analysis-file-assessment_q2sql)
 - [Assessment Three](#account-inactivity-alert-assessment_q3sql)
-- [Assessment Three](#customer-lifetime-value-clv-estimation-assessment_q4sql)
+- [Assessment Four](#customer-lifetime-value-clv-estimation-assessment_q4sql)
 
 # Random Info
 `leet code username`: ethical_data_alchemist
